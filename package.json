@@ -1,6 +1,6 @@
 {
   "name": "react-elegant",
-  "version": "0.0.3",
+  "version": "0.0.1",
   "description": "a react ui component library",
   "main": "index.js",
   "scripts": {
