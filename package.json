@@ -1,0 +1,24 @@
+{
+  "name": "react-elegant",
+  "version": "0.0.1",
+  "description": "a react ui component library",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/react-elegant/react-elegant.git"
+  },
+  "keywords": [
+    "react",
+    "ui",
+    "component"
+  ],
+  "author": "yibingxiong@126.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/react-elegant/react-elegant/issues"
+  },
+  "homepage": "https://github.com/react-elegant/react-elegant#readme"
+}
