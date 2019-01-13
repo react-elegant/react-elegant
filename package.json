@@ -4,7 +4,8 @@
   "description": "a react ui component library",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "lint": "./node_modules/.bin/eslint . --report-unused-disable-directives && echo \"eslint: no lint errors\""
   },
   "jest": {
     "transform": {
