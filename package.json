@@ -4,7 +4,12 @@
   "description": "a react ui component library",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "jest"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    }
   },
   "repository": {
     "type": "git",
@@ -20,5 +25,10 @@
   "bugs": {
     "url": "https://github.com/react-elegant/react-elegant/issues"
   },
-  "homepage": "https://github.com/react-elegant/react-elegant#readme"
+  "homepage": "https://github.com/react-elegant/react-elegant#readme",
+  "devDependencies": {
+    "babel-jest": "^23.6.0",
+    "babel-preset-env": "^1.7.0",
+    "jest": "^23.6.0"
+  }
 }
