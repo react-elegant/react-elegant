@@ -1,12 +1,13 @@
 {
   "name": "react-elegant",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "a react ui component library",
   "main": "index.js",
   "scripts": {
     "test": "jest --coverage",
     "lint": "./node_modules/.bin/eslint . --cache --report-unused-disable-directives && echo \"eslint: no lint errors\"",
-    "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls",
+    "release": "standard-version"
   },
   "jest": {
     "moduleFileExtensions": [
@@ -51,7 +52,8 @@
     "eslint-plugin-react": "^7.12.3",
     "jest": "^23.6.0",
     "pre-commit": "^1.2.2",
-    "sinon": "^7.2.2"
+    "sinon": "^7.2.2",
+    "standard-version": "^4.4.0"
   },
   "dependencies": {
     "babel-eslint": "^10.0.1",
