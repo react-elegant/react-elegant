@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --coverage",
-    "lint": "./node_modules/.bin/eslint . --report-unused-disable-directives && echo \"eslint: no lint errors\"",
+    "lint": "./node_modules/.bin/eslint . --cache --report-unused-disable-directives && echo \"eslint: no lint errors\"",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
   },
   "jest": {
