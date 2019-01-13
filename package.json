@@ -53,12 +53,17 @@
     "jest": "^23.6.0",
     "pre-commit": "^1.2.2",
     "sinon": "^7.2.2",
-    "standard-version": "^4.4.0"
+    "standard-version": "^4.4.0",
+    "validate-commit-msg": "^2.14.0"
   },
   "dependencies": {
     "babel-eslint": "^10.0.1",
     "prop-types": "^15.6.2",
     "react": "^16.7.0",
     "react-dom": "^16.7.0"
+  },
+  "config": {
+    "validate-commit-msg": {
+    }
   }
 }
