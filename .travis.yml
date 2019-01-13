@@ -9,3 +9,6 @@ cache: npm
 
 install:
   npm i
+
+script:
+  npm run test
