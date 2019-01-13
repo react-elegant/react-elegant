@@ -4,7 +4,7 @@
   "description": "a react ui component library",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --coverage",
     "lint": "./node_modules/.bin/eslint . --report-unused-disable-directives && echo \"eslint: no lint errors\""
   },
   "jest": {
@@ -40,6 +40,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
+    "coveralls": "^3.0.2",
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.7.1",
     "eslint": "^5.12.0",

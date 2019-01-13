@@ -8,9 +8,12 @@ env:
 cache: npm
 
 install:
-  npm i
+  - npm i
 
 script:
-  npm run lint
-  npm run test
+  - npm run lint
+  - npm run test
+
+after_script:
+    - npm run coveralls
   
