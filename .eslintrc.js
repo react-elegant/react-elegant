@@ -3,6 +3,7 @@ module.exports = {
         "jest": true,   // 这样jest 里的全局变量就不会报错了
         "node": true,
     },
+    "parser": "babel-eslint",
     "globals": {},      // 加这个可以定义你自己的全局变量
     "extends": "airbnb",
     rules: {
