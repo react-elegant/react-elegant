@@ -21,4 +21,11 @@ branches:
   only:
     - master
     - dev
+
+notifications:
+  email:
+    recipients:
+      - yibingxiong@126.com
+    on_success: change
+    on_failure: always
   
