@@ -7,7 +7,7 @@ class Test extends React.Component {
   }
 
   componentDidMount() {
-    console.log('1');
+    console.log('2');
   }
 
   render() {
