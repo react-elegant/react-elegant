@@ -1,4 +1,5 @@
 module.exports = {
+  "root":true,
     "env": {
         "jest": true,   // 这样jest 里的全局变量就不会报错了
         "node": true,

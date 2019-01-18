@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --coverage",
-    "lint": "./node_modules/.bin/eslint . --cache --report-unused-disable-directives && echo \"eslint: no lint errors\"",
+    "elint": "eslint . --cache --report-unused-disable-directives && echo \"eslint: no eslint errors\"",
+    "tlint": "tslint -p tsconfig.json \"src/**/*.{ts,tsx}\" && echo \"tslint: no tslint errors\"",
+    "lint": "eslint . --cache --report-unused-disable-directives && echo \"eslint: no eslint errors\" && tslint -p tsconfig.json \"src/**/*.{ts,tsx}\" && echo \"tslint: no tslint errors\"",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls",
     "release": "standard-version",
     "cm": "npx git-cz"
@@ -19,13 +21,15 @@
       "^.+\\.jsx?$": "babel-jest"
     }
   },
-  "pre-commit": [
-    "lint",
-    "test"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/react-elegant/react-elegant.git"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "validate-commit-msg",
+      "pre-commit": "npm run lint"
+    }
   },
   "keywords": [
     "react",
@@ -39,6 +43,9 @@
   },
   "homepage": "https://github.com/react-elegant/react-elegant#readme",
   "devDependencies": {
+    "@types/react": "^16.7.18",
+    "@types/react-dom": "^16.0.11",
+    "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
@@ -51,14 +58,16 @@
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.12.3",
+    "husky": "^1.3.1",
     "jest": "^23.6.0",
     "pre-commit": "^1.2.2",
     "sinon": "^7.2.2",
     "standard-version": "^4.4.0",
+    "tslint": "^5.12.1",
+    "typescript": "^3.2.2",
     "validate-commit-msg": "^2.14.0"
   },
   "dependencies": {
-    "babel-eslint": "^10.0.1",
     "prop-types": "^15.6.2",
     "react": "^16.7.0",
     "react-dom": "^16.7.0"
