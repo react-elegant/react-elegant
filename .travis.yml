@@ -9,6 +9,7 @@ cache: npm
 
 install:
   - npm i
+  - cd examples && npm i
 
 script:
   - npm run lint
