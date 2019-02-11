@@ -15,5 +15,6 @@ module.exports = {
       "no-plusplus": 0,   // 可以使用i++
       "react/prefer-stateless-function": 0,
       "import/extensions": 0,
+      "no-confusing-arrow": 0,
     }
 };
