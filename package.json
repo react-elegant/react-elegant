@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --coverage",
+    "dev": "cd ./examples && npm run dev",
     "elint": "eslint . --cache --report-unused-disable-directives && echo \"eslint: no eslint errors\"",
     "tlint": "tslint -p tsconfig.json \"src/**/*.{ts,tsx}\" && echo \"tslint: no tslint errors\"",
     "lint": "eslint . --cache --report-unused-disable-directives && echo \"eslint: no eslint errors\" && tslint -p tsconfig.json \"src/**/*.{ts,tsx}\" && echo \"tslint: no tslint errors\"",
