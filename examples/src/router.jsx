@@ -9,18 +9,8 @@ const Loading = () => <div>Loading...</div>;
 
 const Routers = {
   // 首页
-  '/': Loadable({
-    loader: () => import(/* webpackChunkName: "home" */'./pages/Home.jsx'),
-    loading: Loading,
-  }),
-  // 首页
-  '/home': Loadable({
-    loader: () => import(/* webpackChunkName: "home" */'./pages/Home.jsx'),
-    loading: Loading,
-  }),
-  // 关于
-  '/about': Loadable({
-    loader: () => import(/* webpackChunkName: "about" */'./pages/About.jsx'),
+  '/Button': Loadable({
+    loader: () => import(/* webpackChunkName: "Button" */'./pages/Button.jsx'),
     loading: Loading,
   }),
 };

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import './App.css';
 // import logo from './logo.svg';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { HashRouter as Router, Route, Link } from 'react-router-dom';
 
 import Routers from './router.jsx';
 
@@ -13,16 +13,11 @@ class App extends Component {
           <nav>
             <ul>
               <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/about/">About</Link>
+                <Link to="/Button">Button</Link>
               </li>
             </ul>
           </nav>
-          <Route path="/" exact component={Routers['/']} />
-          <Route path="/home" exact component={Routers['/home']} />
-          <Route path="/about" component={Routers['/about']} />
+          <Route path="/Button" exact component={Routers['/Button']} />
         </div>
       </Router>
     );
