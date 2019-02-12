@@ -1,5 +1,7 @@
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
   entry: {
@@ -29,13 +31,19 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(['dist']),
+    new webpack.NamedModulesPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+    new HtmlWebpackPlugin({
+      template: path.join(__dirname, 'index.html'),
+    }),
   ],
   devServer: {
-    contentBase: path.join(__dirname),
+    contentBase: './dist',
     compress: true,
     port: 9000,
     host: 'localhost',
     open: true,
+    hot: true,
   },
   optimization: {
     splitChunks: {

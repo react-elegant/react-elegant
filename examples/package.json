@@ -14,7 +14,8 @@
   "scripts": {
     "start": "node ./server/index.js",
     "build": "webpack",
-    "watch": "webpack --watch"
+    "watch": "webpack --watch",
+    "dev": "webpack-dev-server"
   },
   "browserslist": [
     ">0.2%",
@@ -29,7 +30,9 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "clean-webpack-plugin": "^1.0.1",
+    "html-webpack-plugin": "^3.2.0",
     "webpack": "^4.26.0",
-    "webpack-cli": "^3.1.2"
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.14"
   }
 }
