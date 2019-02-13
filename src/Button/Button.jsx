@@ -13,27 +13,27 @@ border: 2px solid palevioletred;
 border-radius: 3px;
 `;
 
-class Test extends React.Component {
+class Btn extends React.Component {
   static defaultProps = {
     click: () => { },
   }
 
   render() {
     const {
-      text,
       click,
+      children,
     } = this.props;
     return (
-      <Button onClick={click} type="button">
-        {text}
+      <Button onClick={click} type="button" className="test">
+        {children}
       </Button>
     );
   }
 }
 
-Test.propTypes = {
-  text: PropTypes.string.isRequired, // 按钮文字
+Btn.propTypes = {
+  children: PropTypes.node.isRequired,
   click: PropTypes.func, // 点击事件
 };
 
-export default Test;
+export default Btn;

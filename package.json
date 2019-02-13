@@ -70,6 +70,7 @@
     "validate-commit-msg": "^2.14.0"
   },
   "dependencies": {
+    "classnames": "^2.2.6",
     "prop-types": "^15.6.2",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",

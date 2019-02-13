@@ -4,7 +4,10 @@ import Button from '../../../src/Button';
 export default function ButtonPage() {
   return (
     <div>
-      <Button text="按钮" />
+      <Button>
+        <span className="t">1</span>
+        <span>4</span>
+      </Button>
     </div>
   );
 }
