@@ -17,6 +17,10 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
         test: /\.(js|jsx)$/,
         exclude: /(node_modules|bower_components)/,
         use: [
@@ -26,6 +30,36 @@ module.exports = {
               presets: ['react', 'env', 'stage-2'],
             },
           }],
+      },
+      {
+        test: /\.scss$/,
+        use: [{
+          loader: 'style-loader', // 将 JS 字符串生成为 style 节点
+        }, {
+          loader: 'css-loader', // 将 CSS 转化成 CommonJS 模块
+        }, {
+          loader: 'sass-loader', // 将 Sass 编译成 CSS
+        }],
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg|woff2?|eot|ttf)$/i,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192,
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(png|jpg|gif|ttf)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {},
+          },
+        ],
       },
     ],
   },
