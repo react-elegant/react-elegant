@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './Button.scss';
+import { preClass } from '../utils';
 
 class Btn extends React.Component {
   static defaultProps = {
@@ -13,7 +14,7 @@ class Btn extends React.Component {
       children,
     } = this.props;
     return (
-      <button onClick={click} type="button" className="egt-1">
+      <button onClick={click} type="button" className={preClass('test')}>
         {children}
       </button>
     );
