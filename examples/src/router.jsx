@@ -9,6 +9,11 @@ const Loading = () => <div>Loading...</div>;
 
 const Routers = {
   // 首页
+  '/Index': Loadable({
+    loader: () => import(/* webpackChunkName: "Index" */'./pages/Index.jsx'),
+    loading: Loading,
+  }),
+  // 按钮
   '/Button': Loadable({
     loader: () => import(/* webpackChunkName: "Button" */'./pages/Button.jsx'),
     loading: Loading,
