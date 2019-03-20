@@ -20,7 +20,7 @@
     ],
     "transform": {
       "^.+\\.jsx?$": "babel-jest",
-      "^.+\\.scss$": "jest-sass"
+      "^.+\\.scss$": "sass-jest"
     }
   },
   "repository": {
@@ -63,8 +63,8 @@
     "eslint-plugin-react": "^7.12.3",
     "husky": "^1.3.1",
     "jest": "^23.6.0",
-    "jest-sass": "^0.1.0",
     "pre-commit": "^1.2.2",
+    "sass-jest": "^0.1.7",
     "sinon": "^7.2.2",
     "standard-version": "^4.4.0",
     "tslint": "^5.12.1",
